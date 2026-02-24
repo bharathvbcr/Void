@@ -1,0 +1,73 @@
+
+> my-project@0.1.0 build
+> next build
+
+ΓÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\bhara\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\bhara\Downloads\Code\Void\pnpm-lock.yaml
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 4 errors:
+./Downloads/Code/Void/app/page.tsx:12:25
+Ecmascript file had an error
+  10 |
+  11 | // Lazy load heavy interactive components below the fold
+> 12 | const FriendshipCycle = dynamic(() => import("@/components/void/friendship-cycle").then(mod => mod.FriendshipCycle), { ssr: false })
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | const HeartbeatLine = dynamic(() => import("@/components/void/heartbeat-line").then(mod => mod.HeartbeatLine), { ssr: false })
+  14 | const TouchToRemember = dynamic(() => import("@/components/void/touch-to-remember").then(mod => mod.TouchToRemember), { ssr: false })
+  15 | const ClosureCard = dynamic(() => import("@/components/void/closure-card").then(mod => mod.ClosureCard), { ssr: false })
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+
+./Downloads/Code/Void/app/page.tsx:13:23
+Ecmascript file had an error
+  11 | // Lazy load heavy interactive components below the fold
+  12 | const FriendshipCycle = dynamic(() => import("@/components/void/friendship-cycle").then(mod => mod.FriendshipCycle), { ssr: false })
+> 13 | const HeartbeatLine = dynamic(() => import("@/components/void/heartbeat-line").then(mod => mod.HeartbeatLine), { ssr: false })
+     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 | const TouchToRemember = dynamic(() => import("@/components/void/touch-to-remember").then(mod => mod.TouchToRemember), { ssr: false })
+  15 | const ClosureCard = dynamic(() => import("@/components/void/closure-card").then(mod => mod.ClosureCard), { ssr: false })
+  16 |
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+
+./Downloads/Code/Void/app/page.tsx:14:25
+Ecmascript file had an error
+  12 | const FriendshipCycle = dynamic(() => import("@/components/void/friendship-cycle").then(mod => mod.FriendshipCycle), { ssr: false })
+  13 | const HeartbeatLine = dynamic(() => import("@/components/void/heartbeat-line").then(mod => mod.HeartbeatLine), { ssr: false })
+> 14 | const TouchToRemember = dynamic(() => import("@/components/void/touch-to-remember").then(mod => mod.TouchToRemember), { ssr: false })
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 | const ClosureCard = dynamic(() => import("@/components/void/closure-card").then(mod => mod.ClosureCard), { ssr: false })
+  16 |
+  17 | export default function Page() {
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+
+./Downloads/Code/Void/app/page.tsx:15:21
+Ecmascript file had an error
+  13 | const HeartbeatLine = dynamic(() => import("@/components/void/heartbeat-line").then(mod => mod.HeartbeatLine), { ssr: false })
+  14 | const TouchToRemember = dynamic(() => import("@/components/void/touch-to-remember").then(mod => mod.TouchToRemember), { ssr: false })
+> 15 | const ClosureCard = dynamic(() => import("@/components/void/closure-card").then(mod => mod.ClosureCard), { ssr: false })
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 |
+  17 | export default function Page() {
+  18 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+
+    at <unknown> (./Downloads/Code/Void/app/page.tsx:12:25)
+    at <unknown> (./Downloads/Code/Void/app/page.tsx:13:23)
+    at <unknown> (./Downloads/Code/Void/app/page.tsx:14:25)
+    at <unknown> (./Downloads/Code/Void/app/page.tsx:15:21)
