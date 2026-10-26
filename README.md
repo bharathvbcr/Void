@@ -108,6 +108,8 @@ silenceCounter: {
 
 ## 📜 License & Credits
 
-Distributed under the **MIT License**. Created with 🖤 by [bharathvbcr](https://github.com/bharathvbcr).
+Distributed under the **[MIT License](LICENSE)**. Created with 🖤 by [bharathvbcr](https://github.com/bharathvbcr).
+
+- UI primitives built on **[Radix UI](https://www.radix-ui.com/)** and **[shadcn/ui](https://github.com/shadcn-ui/ui)** (`shadcn`, MIT), with toast state management inspired by **[react-hot-toast](https://github.com/timolins/react-hot-toast)** (`Timo Lins`, MIT).
 
 *Inspired by the quiet moments and the people who are still here, but unreachable.*
